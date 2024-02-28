@@ -6,19 +6,19 @@
 
 / {
   macros {
-    ZMK_MACRO(prev_tab,
-      bindings
-        = <&macro_press &kp LCTRL>
-        , <&macro_tap &kp PAGE_DOWN>
-        , <&macro_release &kp LCTRL>
-        ;
+    ZMK_MACRO(prev_tab,              \
+      bindings                       \
+        = <&macro_press &kp LCTRL>   \
+        , <&macro_tap &kp PAGE_DOWN> \
+        , <&macro_release &kp LCTRL> \
+        ;                            \
     );
-    ZMK_MACRO(next_tab,
-      bindings
-        = <&macro_press &kp LCTRL>
-        , <&macro_tap &kp PAGE_UP>
-        , <&macro_release &kp LCTRL>
-        ;
+    ZMK_MACRO(next_tab,              \
+      bindings                       \
+        = <&macro_press &kp LCTRL>   \
+        , <&macro_tap &kp PAGE_UP>   \
+        , <&macro_release &kp LCTRL> \
+        ;                            \
     );
   };
 };
