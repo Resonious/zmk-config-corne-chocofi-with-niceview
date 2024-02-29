@@ -5,22 +5,26 @@
 #define MIRYOKU_NAV_VI 1
 
 / {
-  macros {
-    ZMK_MACRO(prev_tab,              \
-      bindings                       \
-        = <&macro_press &kp LCTRL>   \
-        , <&macro_tap &kp PAGE_DOWN> \
-        , <&macro_release &kp LCTRL> \
-        ;                            \
-    );
-    ZMK_MACRO(next_tab,              \
-      bindings                       \
-        = <&macro_press &kp LCTRL>   \
-        , <&macro_tap &kp PAGE_UP>   \
-        , <&macro_release &kp LCTRL> \
-        ;                            \
-    );
-  };
+    macros {
+        prev_tab: prev_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp PAGE_DOWN>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        next_tab: next_tab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp PAGE_UP>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+    };
 };
 
 #define C01 &prev_tab
