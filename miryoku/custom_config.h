@@ -4,14 +4,27 @@
 #define MIRYOKU_ALPHAS_QWERTY 1
 #define MIRYOKU_NAV_VI 1
 
-#define PREV_TAB &kp LC(PAGE_DOWN)
-#define NEXT_TAB &kp LC(PAGE_UP)
+#define NEXT_TAB &kp LC(PAGE_DOWN)
+#define PREV_TAB &kp LC(PAGE_UP)
 #define HX_SWAP &kp LA(SEMICOLON)
 
-#define C01 PREV_TAB
-#define C02 NEXT_TAB
+/ {
+    macros {
+        tmux_scroll: tmux_scroll {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LC(B)>
+                , <&macro_tap &kp LEFT_BRACKET>
+                ;
+        };
+    };
+};
+
+#define C01 NEXT_TAB
+#define C02 PREV_TAB
 #define C03 &kp K_BACK
 #define C04 HX_SWAP
-#define C05 &none
-#define C06 &none
+#define C05 &caps_word
+#define C06 &tmux_scroll
 
