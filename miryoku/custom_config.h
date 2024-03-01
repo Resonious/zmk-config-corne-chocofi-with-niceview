@@ -14,8 +14,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LC(B)>
-                , <&kp LEFT_BRACKET>
+                = <&macro_press &kp LEFT_CONTROL>
+                , <&macro_tap &kp B>
+                , <&macro_release &kp LEFT_CONTROL>
+                , <&macro_tap &kp LEFT_BRACKET>
                 ;
         };
     };
