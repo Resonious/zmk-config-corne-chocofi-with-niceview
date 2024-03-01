@@ -1,6 +1,10 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
 #define MIRYOKU_ALPHAS_QWERTY 1
 #define MIRYOKU_NAV_VI 1
 
