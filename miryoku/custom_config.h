@@ -32,5 +32,5 @@
 #define C03 &kp K_BACK
 #define C04 HX_SWAP
 #define C05 &caps_word
-#define C06 &tmux_scroll
+#define C06 &kp CAPSLOCK
 
